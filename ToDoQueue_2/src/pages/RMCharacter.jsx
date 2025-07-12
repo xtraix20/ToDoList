@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const CharacterCard = ({ character }) => (
   <div className="cardData">
@@ -55,21 +56,21 @@ const RMCharacter = () => {
   return (
     <div className='general'>
       <div className='ButtonsEntity'>
-        <a href="/RMEpisode " target = "blank">
+        <Link to="RMEpisode">
         <button className='btn-API'> 
         EPISODES
         </button>
-        </a>
-        <a href="/RMLocation " target = "blank">
+        </Link>
+        <Link to="RMLocation">
         <button className='btn-API'> 
         LOCATIONS
         </button>
-        </a>
-        <a href="/RMCharacter " target = "blank">
+        </Link>
+        <Link to="RMCharacter">
         <button className='btn-API'> 
         CHARACTER
         </button>
-        </a>
+        </Link>
         </div>
       <div className="Buttons">
         <button className="btn-API" onClick={returnToPageOne}>

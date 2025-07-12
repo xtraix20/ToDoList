@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import React from 'react'
+import { Link } from 'react-router-dom'
 import '../styles/RMLocation.sass'
 
 const LocationCard = ({ location }) => (
@@ -35,21 +36,21 @@ const RMLocation = () => {
   return (
     <div>
       <div className='ButtonsEntity'>
-        <a href="/RMEpisode " target = "blank">
+        <Link to="RMEpisode">
         <button className='btn-API'> 
         EPISODES
         </button>
-        </a>
-        <a href="/RMLocation " target = "blank">
+        </Link>
+        <Link to="RMLocation">
         <button className='btn-API'> 
         LOCATIONS
         </button>
-        </a>
-        <a href="/RMCharacter " target = "blank">
+        </Link>
+        <Link to="RMCharacter">
         <button className='btn-API'> 
         CHARACTER
         </button>
-        </a>
+        </Link>
         </div>
       <button className="btn-API" onClick={returnToPageOne}>
         Return to page one
