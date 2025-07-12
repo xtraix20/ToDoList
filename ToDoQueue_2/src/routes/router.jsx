@@ -14,37 +14,30 @@ import Layout from "../layout/Layout";
 // Definir lo que hay dentro del enrutador
 const router = createBrowserRouter([
     {
-        // Si escribo una ruta que NO existe va a la pÃ¡gina de error
-        path:"/",
+        path: "/",
         element: <Layout/>,
         errorElement: <NotFound/>,
         children: [
             {
-                // Si la base de la ruta estÃ¡ bien, pero el resto esta mal va a la pÃ¡gina de error
-                errorElement: <NotFound/>,
-                children:[
-                    {
-                        // Default route - show ToDoList when visiting root path
-                        index: true,
-                        element: <ToDoList/>
-                    },
-                    {
-                        path: "/RMLocation",
-                        element: <RMLocation/>
-                    },
-                    {
-                        path: "/todo",
-                        element: <ToDoList/>
-                    },
-                    {
-                        path: "/RMCharacter",
-                        element: <RMCharacter/>
-                    },
-                    {
-                        path: "/RMEpisode",
-                        element: <RMEpisode/>
-                    }
-                ]
+                // Default route - show ToDoList when visiting root path
+                index: true,
+                element: <ToDoList/>
+            },
+            {
+                path: "RMLocation",
+                element: <RMLocation/>
+            },
+            {
+                path: "todo",
+                element: <ToDoList/>
+            },
+            {
+                path: "RMCharacter",
+                element: <RMCharacter/>
+            },
+            {
+                path: "RMEpisode",
+                element: <RMEpisode/>
             }
         ]
     }
