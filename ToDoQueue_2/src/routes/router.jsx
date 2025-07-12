@@ -1,9 +1,9 @@
-//rafce
+﻿//rafce
 // Librerias de React
 import React from "react";
-// Crear el enrutador(Los links del Ménu)
+// Crear el enrutador(Los links del MÃ©nu)
 import { createBrowserRouter } from "react-router-dom";
-// Páginas
+// PÃ¡ginas
 import RMLocation from "../pages/RMLocation";
 import NotFound from '../pages/NotFound';
 import ToDoList from "../pages/ToDoList";
@@ -11,19 +11,23 @@ import RMCharacter from "../pages/RMCharacter";
 import RMEpisode from "../pages/RMEpisode";
 // Componete Base
 import Layout from "../layout/Layout";
-
 // Definir lo que hay dentro del enrutador
 const router = createBrowserRouter([
     {
-        // Si escribo una ruta que NO existe va a la página de error
+        // Si escribo una ruta que NO existe va a la pÃ¡gina de error
         path:"/",
         element: <Layout/>,
         errorElement: <NotFound/>,
         children: [
             {
-                // Si la base de la ruta está bien, pero el resto esta mal va a la página de error
+                // Si la base de la ruta estÃ¡ bien, pero el resto esta mal va a la pÃ¡gina de error
                 errorElement: <NotFound/>,
                 children:[
+                    {
+                        // Default route - show ToDoList when visiting root path
+                        index: true,
+                        element: <ToDoList/>
+                    },
                     {
                         path: "/RMLocation",
                         element: <RMLocation/>
@@ -44,6 +48,7 @@ const router = createBrowserRouter([
             }
         ]
     }
-])
-
+], {
+    basename: "/ToDoList"
+})
 export default router
