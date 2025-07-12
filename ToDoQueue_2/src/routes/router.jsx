@@ -2,7 +2,7 @@
 // Librerias de React
 import React from "react";
 // Crear el enrutador(Los links del MÃ©nu)
-import { createBrowserRouter } from "react-router-dom";
+import { createHashRouter } from "react-router-dom";
 // PÃ¡ginas
 import RMLocation from "../pages/RMLocation";
 import NotFound from '../pages/NotFound';
@@ -12,7 +12,7 @@ import RMEpisode from "../pages/RMEpisode";
 // Componete Base
 import Layout from "../layout/Layout";
 // Definir lo que hay dentro del enrutador
-const router = createBrowserRouter([
+const router = createHashRouter([
     {
         path: "/",
         element: <Layout/>,
@@ -41,7 +41,5 @@ const router = createBrowserRouter([
             }
         ]
     }
-], {
-    basename: "/ToDoList"
-})
+])
 export default router
