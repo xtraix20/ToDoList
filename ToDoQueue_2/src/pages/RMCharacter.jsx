@@ -56,17 +56,17 @@ const RMCharacter = () => {
   return (
     <div className='general'>
       <div className='ButtonsEntity'>
-        <Link to="RMEpisode">
+        <Link to="/RMEpisode">
         <button className='btn-API'> 
         EPISODES
         </button>
         </Link>
-        <Link to="RMLocation">
+        <Link to="/RMLocation">
         <button className='btn-API'> 
         LOCATIONS
         </button>
         </Link>
-        <Link to="RMCharacter">
+        <Link to="/RMCharacter">
         <button className='btn-API'> 
         CHARACTER
         </button>

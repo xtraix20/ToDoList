@@ -9,13 +9,13 @@ const Header =()=> {
       <div className='uno'>
         <div className='container'>
            <div className='Logo' id= "to-do-logo" >
-            <Link to="todo">
+            <Link to="/todo">
              <img src= {todo} className='LogoToDo' alt= "to do list" ></img></Link>
             <p className='Title'> ToDoList </p>
             </div>
             <div className='Logo'><h1 className='Title' id="DoTo">Do To Queue </h1></div>
           <div className='Logo' id= "rick">
-            <Link to="RMCharacter">
+            <Link to="/RMCharacter">
              <img src = {rick}className='rick' alt = "rick" ></img> </Link>
            <p className='Title5'> Rick and morty API </p>
             </div>
